@@ -19,6 +19,7 @@ type ServerStatus struct {
 	Port    int    `json:"port"`
 }
 
+// Status : Health Check
 func (c *ServerController) Status() {
 
 	ip := c.Ctx.Input.IP()
