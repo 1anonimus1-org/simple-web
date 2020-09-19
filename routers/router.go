@@ -14,6 +14,7 @@ import (
 )
 
 func init() {
+	beego.Router("/status", &controllers.ServerController{}, "get:Status")
 	ns := beego.NewNamespace("/v1",
 		beego.NSRouter("/notifme", &controllers.GitController{}, "post:GitWebHook"),
 	)
